@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lilac Dress: A Fast Fashion Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Kalam:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            transition: background-color 1.2s ease;
+        }
+
+        .handwritten {
+            font-family: 'Kalam', cursive;
+        }
+
+        .panel {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            border-bottom: 8px solid #000;
+        }
+
+        .speech-bubble {
+            position: relative;
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.25rem 1.75rem;
+            box-shadow: 8px 8px 0px rgba(0,0,0,1);
+            max-width: 280px;
+            border: 3px solid #000;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 30px;
+            border-width: 20px 20px 0 0;
+            border-style: solid;
+            border-color: #000 transparent transparent transparent;
+        }
+
+        .thought-bubble {
+            position: relative;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            max-width: 200px;
+            border: 2px dashed #666;
+            text-align: center;
+        }
+
+        .caption-box {
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transform: rotate(-1.5deg);
+            margin-bottom: 3rem;
+            box-shadow: 6px 6px 0px rgba(168, 85, 247, 0.4);
+            font-size: 1.25rem;
+            z-index: 10;
+        }
+
+        .match-cut-line {
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(to bottom, #a855f7, #c026d3);
+            margin: 1rem 0;
+        }
+
+        .decay-fade {
+            filter: saturate(0.7) contrast(0.9);
+        }
+    </style>
+</head>
+<body class="bg-purple-50 overflow-x-hidden">
+
+    <!-- Progress Indicator -->
+    <div class="fixed top-0 left-0 w-full h-3 z-50 bg-slate-800">
+        <div id="progress-bar" class="h-full bg-purple-500 w-0 transition-all duration-300 shadow-[0_0_15px_#a855f7]"></div>
+    </div>
+
+    <!-- Panel 1: The End (START: BRIGHT LILAC / HOOK) -->
+    <section class="panel bg-purple-50" data-color="#f5f3ff">
+        <div class="caption-box">The End: Desert Landfill</div>
+        <div class="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-white rounded-full shadow-inner border-4 border-purple-200">
+            <svg viewBox="0 0 200 200" class="w-full h-full text-purple-100 p-8">
+                <path d="M10,180 Q50,140 90,180 Q130,120 170,180" fill="none" stroke="currentColor" stroke-width="8"/>
+            </svg>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <i data-lucide="ghost" class="w-40 h-40 text-purple-400 animate-pulse"></i>
+            </div>
+        </div>
+        <div class="thought-bubble mt-10 handwritten text-lg border-purple-400">
+            "I am just a ghost in a mountain of lilac plastic."
+        </div>
+    </section>
+
+    <!-- Panel 2: The Rejection -->
+    <section class="panel bg-purple-100" data-color="#ede9fe">
+        <div class="caption-box">Two Weeks Earlier</div>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="relative bg-white p-8 rounded-3xl border-4 border-black rotate-3 shadow-xl">
+                <i data-lucide="trash-2" class="w-48 h-48 text-purple-400"></i>
+                <div class="absolute -top-4 -right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-black text-sm uppercase shadow-lg">Unsellable</div>
+            </div>
+            <div class="speech-bubble handwritten text-xl">
+                "Loose thread. Cheap fabric. It’s not even worth donating."
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 3: The Party (BRIGHTEST POINT) -->
+    <section class="panel bg-white" data-color="#ffffff">
+        <div class="caption-box bg-purple-600">Saturday Night: The Peak</div>
+        <div class="relative flex flex-col items-center">
+            <div class="flex gap-6 mb-10">
+                <div class="w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white"><i data-lucide="heart" class="fill-current"></i></div>
+                <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white"><i data-lucide="camera"></i></div>
+            </div>
+            <div class="relative bg-purple-50 p-12 rounded-[3rem] border-4 border-purple-500 -rotate-2">
+                <i data-lucide="shirt" class="w-48 h-48 text-purple-500 filter drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]"></i>
+                <div class="absolute -top-12 -right-12 bg-purple-600 text-white p-6 rounded-2xl shadow-2xl border-4 border-white rotate-12">
+                    <p class="font-black text-xl italic uppercase tracking-tighter">New Fit! 🔥✨</p>
+                </div>
+            </div>
+            <div class="speech-bubble mt-12 handwritten text-xl">
+                "It was basically free! One post and I'm done."
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 4: The Arrival -->
+    <section class="panel bg-slate-100" data-color="#f1f5f9">
+        <div class="caption-box">The Unboxing</div>
+        <div class="flex flex-col items-center">
+            <div class="p-8 bg-white border-8 border-dashed border-slate-300 rounded-3xl shadow-inner">
+                <i data-lucide="package-open" class="w-64 h-64 text-slate-900"></i>
+            </div>
+            <div class="mt-10 flex gap-4">
+                <div class="bg-purple-600 text-white px-8 py-3 rounded-xl font-black text-lg shadow-lg uppercase tracking-tight">Add to Cart</div>
+                <div class="bg-slate-900 text-white px-8 py-3 rounded-xl font-black text-lg shadow-lg">$12.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 5: The Connection (SHIFT TO TOXIC NEON) -->
+    <section class="panel bg-slate-900 text-white overflow-hidden" data-color="#0f172a">
+        <div class="caption-box bg-fuchsia-600">The Connection</div>
+        <div class="flex flex-col items-center gap-4">
+            <div class="text-center space-y-2">
+                <i data-lucide="hand" class="w-20 h-20 text-purple-300 mx-auto"></i>
+                <p class="font-bold text-purple-300 uppercase tracking-widest text-xs">Buyer's Hand</p>
+            </div>
+            <div class="match-cut-line"></div>
+            <div class="text-center space-y-2">
+                <i data-lucide="hand" class="w-20 h-20 text-fuchsia-500 mx-auto"></i>
+                <p class="font-bold text-fuchsia-500 uppercase tracking-widest text-xs">Maker's Hand</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 6: The Worker (TOXIC NEON) -->
+    <section class="panel bg-fuchsia-950 text-white" data-color="#4a044e">
+        <div class="caption-box bg-fuchsia-500 shadow-[0_0_15px_#d946ef]">6,000 Miles Away</div>
+        <div class="flex flex-col items-center max-w-xl text-center px-4">
+            <div class="relative mb-10 w-64 h-64 bg-fuchsia-900 rounded-full border-8 border-fuchsia-500 flex items-center justify-center shadow-[0_0_60px_rgba(217,70,239,0.4)]">
+                <svg viewBox="0 0 100 100" class="w-48 h-48">
+                    <circle cx="50" cy="45" r="30" fill="none" stroke="#f5d0fe" stroke-width="2"/>
+                    <path d="M40,45 Q45,42 45,45" fill="none" stroke="#f5d0fe" stroke-width="2"/>
+                    <path d="M55,45 Q60,42 60,45" fill="none" stroke="#f5d0fe" stroke-width="2"/>
+                    <path d="M45,60 Q50,58 55,60" fill="none" stroke="#f5d0fe" stroke-width="2"/>
+                    <path d="M20,90 Q30,70 40,80" fill="#d946ef" stroke="#f5d0fe" stroke-width="1.5"/>
+                    <path d="M80,90 Q70,70 60,80" fill="#d946ef" stroke="#f5d0fe" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-6 text-fuchsia-300">I am the one who pays.</h2>
+            <div class="speech-bubble text-slate-900 handwritten text-2xl rotate-1">
+                "The lilac dye stains my skin for weeks. It’s vibrant, toxic, and everywhere."
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 7: The Field (FINAL DECAY: DULL EARTH) -->
+    <section class="panel bg-stone-200" data-color="#e7e5e4">
+        <div class="caption-box bg-stone-800">The Beginning</div>
+        <div class="flex flex-col items-center text-center decay-fade">
+            <div class="w-40 h-40 bg-stone-300 rounded-full flex items-center justify-center mb-10 border-8 border-stone-400 shadow-xl">
+                <i data-lucide="sprout" class="w-20 h-20 text-stone-600"></i>
+            </div>
+            <div class="bg-stone-100 border-4 border-stone-500 text-stone-700 px-10 py-6 rounded-2xl flex items-center gap-6">
+                <i data-lucide="skull" class="w-12 h-12"></i>
+                <span class="font-black text-2xl uppercase tracking-widest">Chemical Fields</span>
+            </div>
+            <div class="mt-12 space-y-4">
+                <p class="text-stone-900 max-w-sm text-3xl font-black uppercase tracking-tighter leading-none">
+                    Nothing is "free."
+                </p>
+                <p class="text-stone-500 handwritten text-2xl italic leading-tight">
+                    The earth paid the price before you even clicked.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        const observerOptions = { threshold: 0.4 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const newColor = entry.target.getAttribute('data-color');
+                    document.body.style.backgroundColor = newColor;
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.panel').forEach(panel => observer.observe(panel));
+    </script>
+</body>
+</html>
